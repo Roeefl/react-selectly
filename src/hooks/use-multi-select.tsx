@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Option, SelectProps } from "../lib/interfaces";
+import { TOption, SelectProps } from "../lib/interfaces";
 
 const defaultStrings = {
   allItemsAreSelected: "All items are selected.",
@@ -19,7 +19,7 @@ const defaultProps: Partial<SelectProps> = {
   hasSelectAll: true,
   className: "multi-select",
   debounceDuration: 200,
-  options: [] as Option[],
+  options: [] as TOption[],
 };
 
 interface MultiSelectContextProps extends SelectProps {

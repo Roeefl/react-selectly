@@ -1,4 +1,4 @@
-import { Option } from "./interfaces";
+import { TOption } from "./interfaces";
 
 /**
  * A collection of string matching algorithms built with React Select in mind.
@@ -21,10 +21,10 @@ type MapOfStrings = { [key: string]: string };
  * @return A filtered and sorted array of Options.
  */
 export function filterOptions(
-  options: Option[],
+  options: TOption[],
   filter?: string,
   substitutions?: MapOfStrings
-): Option[] {
+): TOption[] {
   // If the filter is blank, return the full list of Options.
   if (!filter) {
     return options;

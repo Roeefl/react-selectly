@@ -1,6 +1,6 @@
-import { Option } from "./interfaces";
+import { TOption } from "./interfaces";
 
-export function filterOptions(options: Option[], filter?: string): Option[] {
+export function filterOptions(options: TOption[], filter?: string): TOption[] {
   // If the filter is blank, return the full list of Options.
   if (!filter) {
     return options;

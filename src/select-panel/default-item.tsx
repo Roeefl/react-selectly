@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Option } from "../lib/interfaces";
+import { TOption } from "../lib/interfaces";
 
 interface IDefaultItemRendererProps {
   checked: boolean;
-  option: Option;
+  option: TOption;
   disabled?: boolean;
   onClick;
 }

@@ -1,17 +1,17 @@
 import { ReactNode } from "react";
 
-export interface Option {
+export type TOption = {
   value;
   label: string;
   key?: string;
   disabled?: boolean;
-}
+};
 
 export interface SelectProps {
-  options: Option[];
-  value: Option[];
-  onChange?;
-  valueRenderer?: (selected: Option[], options: Option[]) => ReactNode;
+  options: TOption[];
+  value: TOption[];
+  onChange: (options: TOption[]) => void;
+  valueRenderer?: (selected: TOption[], options: TOption[]) => ReactNode;
   ItemRenderer?;
   ArrowRenderer?: ({ expanded }) => JSX.Element;
   isLoading?: boolean;
@@ -20,9 +20,9 @@ export interface SelectProps {
   shouldToggleOnHover?: boolean;
   hasSelectAll?: boolean;
   filterOptions?: (
-    options: Option[],
+    options: TOption[],
     filter: string
-  ) => Promise<Option[]> | Option[];
+  ) => Promise<TOption[]> | TOption[];
   overrideStrings?: { [key: string]: string };
   labelledBy: string;
   className?: string;
