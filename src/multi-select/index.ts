@@ -1,9 +1,9 @@
 import { Root } from "./root";
-import { Dropdown } from "./dropdown";
+import { Container } from "./container";
 
 const MultiSelect = {
   Root,
-  Dropdown,
+  Container,
 };
 
 export default MultiSelect;

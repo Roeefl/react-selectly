@@ -17,7 +17,7 @@ import { Loading } from "./loading";
 
 import type { TDropdownProps } from "../lib/interfaces";
 
-export function Dropdown({ closeOnChangedValue = false }: TDropdownProps) {
+export function Container({ closeOnChangedValue = false }: TDropdownProps) {
   const {
     t,
     onMenuToggle,
