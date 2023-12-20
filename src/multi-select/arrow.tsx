@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Arrow = ({ expanded }) => (
   <svg
     width="24"

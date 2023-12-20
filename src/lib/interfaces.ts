@@ -7,7 +7,7 @@ export type TOption = {
   disabled?: boolean;
 };
 
-export interface SelectProps {
+export type TRootProps = {
   options: TOption[];
   value: TOption[];
   onChange: (options: TOption[]) => void;
@@ -34,5 +34,8 @@ export interface SelectProps {
   isOpen?: boolean;
   isCreatable?: boolean;
   onCreateOption?;
+};
+
+export type TDropdownProps = {
   closeOnChangedValue?: boolean;
-}
+};

@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Cross = () => (
   <svg
     width="24"
