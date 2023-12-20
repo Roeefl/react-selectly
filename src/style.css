@@ -1,8 +1,8 @@
 .rmsc {
   --rmsc-main: #4285f4;
-  --rmsc-hover: #f1f3f5;
-  --rmsc-selected: #e2e6ea;
-  --rmsc-border: #ccc;
+  --rmsc-hover: #F6F6F6;
+  --rmsc-selected: #F6F6F6;
+  --rmsc-border: #E8E8EA;
   --rmsc-gray: #aaa;
   --rmsc-bg: #fff;
   --rmsc-p: 10px;
@@ -24,7 +24,7 @@
   z-index: 1;
   top: 100%;
   width: 100%;
-  padding-top: 8px;
+  padding-top: 5px;
 }
 
 .rmsc .dropdown-content .panel-content {
