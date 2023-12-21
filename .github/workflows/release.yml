@@ -1,9 +1,8 @@
 name: RELEASE
 
 on:
-  push:
-    tags:
-      - v[0-9]+.[0-9]+.[0-9]+
+  - push
+  - pull_request
 
 jobs:
   test:
@@ -11,25 +10,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - name: checkout repo
+        uses: actions/checkout@v4
 
-      - name: Setup node
-        uses: actions/setup-node@v2
+      - name: setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: 14.x
-          registry-url: https://registry.npmjs.org
+          node-version: 18
 
-      - name: Install deps and build (with cache)
-        uses: bahmutov/npm-install@v1
+      - uses: pnpm/action-setup@v2
+        name: install pnpm
+        with:
+          version: 8
 
-      - name: Lint
-        run: yarn lint
+      - name: lint
+        run: pnpm lint
 
-      - name: Build
-        run: yarn build
+      - name: build
+        run: pnpm build
 
-      - name: Publishing to NPM
+      - name: publish to NPM
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: npm publish
+        run: pnpm publish

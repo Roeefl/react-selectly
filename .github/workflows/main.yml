@@ -9,23 +9,26 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        node: ["16.x"]
+        node: ["18.x"]
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Use Node ${{ matrix.node }}
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
 
-      - name: Install deps and build (with cache)
-        uses: bahmutov/npm-install@v1
+      - uses: pnpm/action-setup@v2
+        name: install pnpm
+        with:
+          version: 8
 
-      - name: Lint
-        run: yarn lint
+      - name: lint
+        run: pnpm lint
 
-      - name: Build
-        run: yarn build
+      - name: build
+        run: pnpm build
+        
