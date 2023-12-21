@@ -26,8 +26,8 @@ jobs:
         with:
           version: 8
 
-      - name: lint
-        run: pnpm lint
+      - name: run linter
+        run: eslint . --ext .js,.jsx,.ts,.tsx
 
       - name: build
         run: pnpm build
