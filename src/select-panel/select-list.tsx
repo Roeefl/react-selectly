@@ -1,14 +1,12 @@
 /**
  * This component represents an unadorned list of SelectItem (s).
  */
-import React from "react";
-
 import { useMultiSelect } from "../hooks/use-multi-select";
-import { Option } from "../lib/interfaces";
+import { TOption } from "../lib/interfaces";
 import SelectItem from "./select-item";
 
 interface ISelectListProps {
-  options: Option[];
+  options: TOption[];
   onClick;
   skipIndex: number;
 }
@@ -16,7 +14,7 @@ interface ISelectListProps {
 const SelectList = ({ options, onClick, skipIndex }: ISelectListProps) => {
   const { disabled, value, onChange, ItemRenderer } = useMultiSelect();
 
-  const handleSelectionChanged = (option: Option, checked: boolean) => {
+  const handleSelectionChanged = (option: TOption, checked: boolean) => {
     if (disabled) return;
 
     onChange(

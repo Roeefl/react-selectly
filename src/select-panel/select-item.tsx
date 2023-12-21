@@ -5,12 +5,12 @@ import React, { useRef } from "react";
 
 import { useKey } from "../hooks/use-key";
 import { KEY } from "../lib/constants";
-import { Option } from "../lib/interfaces";
+import { TOption } from "../lib/interfaces";
 import DefaultItemRenderer from "./default-item";
 
 interface ISelectItemProps {
   itemRenderer;
-  option: Option;
+  option: TOption;
   checked?: boolean;
   tabIndex?: number;
   disabled?: boolean;

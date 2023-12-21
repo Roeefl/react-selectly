@@ -1,7 +1,7 @@
 export const options = [
   { label: "Grapes 🍇", value: "grapes" },
   { label: "Mango 🥭", value: "mango" },
-  { label: "Strawberry 🍓", value: "strawberry", disabled: true },
+  // { label: "Strawberry 🍓", value: "strawberry", disabled: true },
   { label: "Watermelon 🍉", value: "watermelon" },
   { label: "Pear 🍐", value: "pear" },
   { label: "Apple 🍎", value: "apple" },

@@ -3,7 +3,7 @@
  * and hosts it in the component.  When the component is selected, it
  * drops-down the contentComponent and applies the contentProps.
  */
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { useDidUpdateEffect } from "../hooks/use-did-update-effect";
 import { useKey } from "../hooks/use-key";
@@ -15,7 +15,9 @@ import { Arrow } from "./arrow";
 import { DropdownHeader } from "./header";
 import { Loading } from "./loading";
 
-const Dropdown = () => {
+import type { TDropdownProps } from "../lib/interfaces";
+
+export function Container({ closeOnChangedValue = false }: TDropdownProps) {
   const {
     t,
     onMenuToggle,
@@ -29,7 +31,6 @@ const Dropdown = () => {
     isOpen,
     defaultIsOpen,
     ClearSelectedIcon,
-    closeOnChangedValue,
   } = useMultiSelect();
 
   useEffect(() => {
@@ -148,6 +149,4 @@ const Dropdown = () => {
       )}
     </div>
   );
-};
-
-export default Dropdown;
+}

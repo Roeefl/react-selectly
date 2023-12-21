@@ -1,20 +1,18 @@
-import React from "react";
+import type { TOption } from "../lib/interfaces";
 
-import { Option } from "../lib/interfaces";
-
-interface IDefaultItemRendererProps {
+type TProps = {
   checked: boolean;
-  option: Option;
+  option: TOption;
   disabled?: boolean;
   onClick;
-}
+};
 
 const DefaultItemRenderer = ({
   checked,
   option,
   onClick,
   disabled,
-}: IDefaultItemRendererProps) => (
+}: TProps) => (
   <div className={`item-renderer ${disabled ? "disabled" : ""}`}>
     <input
       type="checkbox"
