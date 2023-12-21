@@ -18,13 +18,11 @@ jobs:
         with:
           node-version: 18
 
-      - uses: pnpm/action-setup@v2
-        name: install pnpm
-        with:
-          version: 8
+      - name: install modules
+        run: npm i -g pnpm && pnpm i
 
       - name: run linter
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: npx eslint src/ --quiet
 
       - name: build
         run: pnpm build
@@ -33,4 +31,3 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: pnpm publish
-

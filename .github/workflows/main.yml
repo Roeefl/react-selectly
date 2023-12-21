@@ -21,13 +21,11 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - uses: pnpm/action-setup@v2
-        name: install pnpm
-        with:
-          version: 8
+      - name: install modules
+        run: npm i -g pnpm && pnpm i
 
       - name: run linter
-        run: eslint . --ext .js,.jsx,.ts,.tsx
+        run: npx eslint src/ --quiet
 
       - name: build
         run: pnpm build
