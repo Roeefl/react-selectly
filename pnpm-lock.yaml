@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^8.1.0
     version: 8.2.6(size-limit@8.2.6)
   '@storybook/addon-actions':
-    specifier: ^6.5.12
-    version: 6.5.16(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^7.6.12
+    version: 7.6.12
   '@storybook/addon-essentials':
     specifier: ^6.5.12
     version: 6.5.16(@babel/core@7.23.6)(eslint@8.24.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(webpack@5.89.0)
@@ -2671,6 +2671,17 @@ packages:
       uuid-browser: 3.1.0
     dev: true
 
+  /@storybook/addon-actions@7.6.12:
+    resolution: {integrity: sha512-vK/H6K+AJ4ZSsCu/+MapYYI/xrynB6JoCOejt//flTigZOhwTWv7WXbmEeqGIIToXy0LA2IUZ1/kCjFXR0lEdQ==}
+    dependencies:
+      '@storybook/core-events': 7.6.12
+      '@storybook/global': 5.0.0
+      '@types/uuid': 9.0.8
+      dequal: 2.0.3
+      polished: 4.2.2
+      uuid: 9.0.1
+    dev: true
+
   /@storybook/addon-backgrounds@6.5.16(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-t7qooZ892BruhilFmzYPbysFwpULt/q4zYXNSmKVbAYta8UVvitjcU4F18p8FpWd9WvhiTr0SDlyhNZuzvDfug==}
     peerDependencies:
@@ -3387,6 +3398,12 @@ packages:
       core-js: 3.34.0
     dev: true
 
+  /@storybook/core-events@7.6.12:
+    resolution: {integrity: sha512-IO4cwk7bBCKH6lLnnIlHO9FwQXt/9CzLUAoZSY9msWsdPppCdKlw8ynJI5YarSNKDBUn8ArIfnRf0Mve0KQr9Q==}
+    dependencies:
+      ts-dedent: 2.2.0
+    dev: true
+
   /@storybook/core-server@6.5.16(eslint@8.24.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
     resolution: {integrity: sha512-/3NPfmNyply395Dm0zaVZ8P9aruwO+tPx4D6/jpw8aqrRSwvAMndPMpoMCm0NXcpSm5rdX+Je4S3JW6JcggFkA==}
     peerDependencies:
@@ -3552,6 +3569,10 @@ packages:
       - react
       - react-dom
       - supports-color
+    dev: true
+
+  /@storybook/global@5.0.0:
+    resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
     dev: true
 
   /@storybook/manager-webpack4@6.5.16(eslint@8.24.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
@@ -4214,6 +4235,10 @@ packages:
 
   /@types/unist@2.0.10:
     resolution: {integrity: sha512-IfYcSBWE3hLpBg8+X2SEa8LVkJdJEkT2Ese2aaLs3ptGdVtABxndrMaxuFlQ1qdFf9Q5rDvDpxI3WwgvKFAsQA==}
+    dev: true
+
+  /@types/uuid@9.0.8:
+    resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==}
     dev: true
 
   /@types/webpack-env@1.18.4:
@@ -6313,6 +6338,11 @@ packages:
   /depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
     engines: {node: '>= 0.8'}
+    dev: true
+
+  /dequal@2.0.3:
+    resolution: {integrity: sha512-0je+qPKHEMohvfRTCEo3CrPG6cAzAYgmzKyxRiYSSDkS6eGJdyVJm7WaYA5ECaAD9wLB2T4EEeymA5aFVcYXCA==}
+    engines: {node: '>=6'}
     dev: true
 
   /des.js@1.1.0:
@@ -12282,6 +12312,11 @@ packages:
   /uuid@3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
     deprecated: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+    hasBin: true
+    dev: true
+
+  /uuid@9.0.1:
+    resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
     hasBin: true
     dev: true
 
